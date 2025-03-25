@@ -1,0 +1,16 @@
+def count_words(text):
+    """Function to count words in a given text."""
+    words = text.split()
+    return len(words)
+def main():
+    """Main function to handle user input and display output."""
+    try:
+        user_input = input("Enter a sentence or paragraph: ").strip()
+        if not user_input:
+            raise ValueError("Input cannot be empty. Please enter some text.")
+        word_count = count_words(user_input)
+        print(f"Word count: {word_count}")
+    except ValueError as e:
+        print(e)
+if __name__== "__main__":
+    main()
